@@ -1,0 +1,213 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+  --ocean-deep: #0a2e3d;
+  --ocean-mid: #0e4d6a;
+  --ocean-light: #1a7a9a;
+  --turquoise: #40c9c9;
+  --sand: #f5e6c8;
+  --sand-dark: #d4b483;
+  --white: #ffffff;
+  --text-dark: #0d1f2d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--ocean-deep);
+  color: var(--white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+header {
+  background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean-mid) 60%, var(--ocean-light) 100%);
+  text-align: center;
+  padding: 3rem 2rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 100px 100px;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(64,201,201,0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 30%, rgba(26,122,154,0.2) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+header h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 20px rgba(64,201,201,0.4);
+  position: relative;
+  animation: fadeDown 0.8s ease both;
+}
+
+header p {
+  margin-top: 0.75rem;
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--sand);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  position: relative;
+  animation: fadeDown 0.8s 0.15s ease both;
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem 1.5rem;
+}
+
+#flex {
+  display: flex;
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: stretch;
+  position: relative;
+}
+
+
+#content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: fadeUp 0.8s 0.2s ease both;
+}
+
+#content section {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(64,201,201,0.2);
+  border-left: 6px solid var(--turquoise);
+  border-radius: 0 100px 100px 0;
+  padding: 1.5rem 1.8rem;
+  backdrop-filter: blur(6px);
+  transition: background 0.3s, border-color 0.3s, transform 0.3s;
+}
+
+#content section:hover {
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(64,201,201,0.5);
+  transform: translateX(4px);
+}
+
+#content section h2 {
+ 
+  font-size: 1.3rem;
+  color: var(--turquoise);
+  margin-bottom: 0.9rem;
+  letter-spacing: 0.03em;
+}
+
+#content section p {
+  font-size: 0.97rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.88);
+  margin-bottom: 0.35rem;
+}
+
+#content section p:last-child {
+  margin-bottom: 0;
+}
+
+#content section strong {
+  color: var(--sand);
+  font-weight: 700;
+}
+
+#curiosidades ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#curiosidades li {
+  position: relative;
+  padding-left: 1.4rem;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.85);
+}
+
+#curiosidades li::before {
+  content: '●';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--turquoise);
+  font-size: 0.65rem;
+  line-height: 1.9;
+}
+
+#flex > img {
+  width: 380px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 2px solid rgba(64,201,201,0.35);
+  box-shadow:
+    0 8px 40px rgba(0,0,0,0.5),
+    0 0 0 6px rgba(64,201,201,0.07);
+  animation: fadeUp 0.8s 0.35s ease both;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+#flex > img:hover {
+  transform: scale(1.02) rotate(-0.5deg);
+  box-shadow:
+    0 16px 60px rgba(0,0,0,0.6),
+    0 0 0 8px rgba(64,201,201,0.15);
+}
+
+footer {
+  background: rgba(0,0,0,0.35);
+  border-top: 1px solid rgba(64,201,201,0.2);
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 0.85rem;
+  color: var(--sand-dark);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── RESPONSIVIDADE ── */
+@media (max-width: 768px) {
+  #flex {
+    flex-direction: column;
+  }
+
+  #flex > img {
+    width: 100%;
+    max-height: 280px;
+    order: -1;
+  }
+}
