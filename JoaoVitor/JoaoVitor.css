@@ -4,6 +4,26 @@
     box-sizing: border-box;
 }
 
+.voltar {
+     position: fixed;
+    left: 20px;
+    bottom: 20px;
+    font-weight: 550;
+    font-size: 18px;
+    padding: 13px 40px;
+    background-color: #F5C659;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.18s ease;
+    z-index: 1;
+}
+
+.voltar:hover {
+    transform: scale(1.02);
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background-image: url("los_angeles.avif");
@@ -58,6 +78,7 @@ h2 {
     border-radius: 8px;
     border: 2px solid #ccc;
     transition: transform 0.3s;
+    z-index: 0;
 }
 
 #galeria img:hover {
