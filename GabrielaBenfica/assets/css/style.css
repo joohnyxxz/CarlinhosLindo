@@ -199,6 +199,25 @@ footer {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+.voltar {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    font-weight: 550;
+    font-size: 18px;
+    padding: 13px 40px;
+    background-color: #F5C659;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none !important;
+    color: rgb(0, 0, 0) !important;
+    transition: transform 0.18s ease;
+}
+
+.voltar:hover {
+    transform: scale(1.02);
+}
+
 /* ── RESPONSIVIDADE ── */
 @media (max-width: 768px) {
   #flex {
