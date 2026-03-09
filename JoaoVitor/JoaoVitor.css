@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url("los_angeles.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    line-height: 1.6;
+}
+
+header {
+    background: #411bed;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+header h1 {
+    font-size: 2em;
+    text-shadow: 2px 2px #bd0fe0;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 8px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    border-bottom: 2px solid ;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    color: #411bed;
+}
+
+#galeria .imagens {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+#galeria img {
+    width: 32%;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    transition: transform 0.3s;
+}
+
+#galeria img:hover {
+    transform: scale(1.03);
+}
+
+ul {
+    list-style: square inside;
+    padding-left: 12px;
+}
+
+footer {
+    text-align: center;
+    padding: 12px;
+    font-weight: bold;
+    background: #333;
+    color: white;
+}
