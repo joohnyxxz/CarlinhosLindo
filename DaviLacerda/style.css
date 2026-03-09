@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: 
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url('https://images.unsplash.com/photo-1549893074-4a3bff0f9e2e?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    background-image: url("Assets/china.webp");
+}
+
+.voltar {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    font-weight: 550;
+    font-size: 18px;
+    padding: 13px 40px;
+    background-color: #F5C659;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.18s ease;
+}
+
+.voltar:hover {
+    transform: scale(1.02);
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px 40px 20px;
+}
+
+header h1 {
+    color: black;
+    font-size: 50px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    animation: fadeDown 1s ease;
+}
+
+header p {
+    color: black;
+    font-size: 18px;
+    opacity: 0.85;
+}
+
+main {
+    flex: 1;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.4s ease;
+}
+
+section:hover {
+    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.18);
+}
+
+section h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    border-left: 4px solid #ff4c4c;
+    padding-left: 10px;
+}
+
+section p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 32px;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
